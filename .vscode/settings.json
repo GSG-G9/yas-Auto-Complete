@@ -1,5 +1,11 @@
 {
     "diffEditor.renderIndicators": false,
     "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "cSpell.ignoreWords": [
+        "auto",
+        "complete",
+        "yas",
+        "yas auto complete"
+    ]
 }
