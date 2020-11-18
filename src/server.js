@@ -1,11 +1,12 @@
 const http = require('http');
-// const env = require('env2')('./path-to-your/.env');
+// eslint-disable-next-line no-unused-vars
 const env = require('env2')('./src/server.env');
+const router = require('./router');
 
 const hostname = process.env.HOSTNAME || 'localhost';
 const port = process.env.PORT || 4000;
 
-const server = http.createServer();
+const server = http.createServer(router);
 
 server.listen(port, () => {
   // eslint-disable-next-line no-console
