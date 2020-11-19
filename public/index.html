@@ -10,9 +10,11 @@
 <body>
   <section class="search">
     <form class="search-form" action="/search" method="post" ">
-        <button class="search-btn" type="submit">search</button>
-     <input class="search-bar" type="search">
-    
+      <input class="search-bar" type="search">
+         <button class="search-btn" type="submit">search</button>
+         </form>
+         <div class="search-suggestion">Suggestion</div>
+   
   </section>
   <section class="front">
   <h3 class="front-wlc">Hi , Welcome to our Web Site </h3>
@@ -20,10 +22,10 @@
   <p class="front-guide"> Let's start Searching ?! ok Enter what you searching about in the search bar above and the result will appear here     </p>
   </section>
    <section class="result">
-     <div result-div></div>
+     <div class="result-div"></div>
    </section>
 
-
+  <script src="/public/js/request.js"></script>
   <script src="/public/js/main.js"></script>
 </body>
 </html>
