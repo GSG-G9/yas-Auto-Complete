@@ -1,6 +1,7 @@
 const path = require('path');
 
 const fs = require('fs');
+const queryString = require('querystring');
 
 const handleMain = (res) => {
   const filepath = path.join(__dirname, '..', 'public', 'index.html');
@@ -37,8 +38,30 @@ const handleAsset = (res, endpoint) => {
     }
   });
 };
+// const handleSearch = (req, res) => {
+//   let allData = '';
+//   req.on('data', (chunkOFData) => {
+//     allData += chunkOFData ;
+//   });
+//   req.on('end', () => {
+//     const convertedData = queryString.parse(allData);
+//   });
+// };
 
+const handleName = (res) => {
+  const filePath = path.join(__dirname, 'name.json');
+  fs.readFile(filePath, 'utf8', (error, file) => {
+    if (error) {
+      res.writeHead(500, { 'Content-Type': 'text/html' });
+      res.end('<h2> server Error  <h2>');
+    } else {
+      res.writeHead(200, { 'Content-Type': 'application/json' });
+      res.end(file);
+    }
+  });
+};
 module.exports = {
   handleMain,
   handleAsset,
+  handleName,
 };
