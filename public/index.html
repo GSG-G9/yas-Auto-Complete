@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/public/img/search.jpg" type="image/gif" >
-    <link rel="styleSheet" href="/public/style.css"/>
+    <link rel="icon" href="public/img/search.png">
+    <link rel="styleSheet" href="public/style.css"/>
     <title>Easy searching </title>
 </head>
 <body>
   <section class="search">
-    <input class="search-bar" type="search">
-    <input class="search-btn" value="search"/>
+    <form class="search-form" action="/search" method="post" ">
+        <button class="search-btn" type="submit">search</button>
+     <input class="search-bar" type="search">
+    
   </section>
   <section class="front">
   <h3 class="front-wlc">Hi , Welcome to our Web Site </h3>
@@ -22,6 +24,6 @@
    </section>
 
 
-  <script src="/public/main.js"></script>
+  <script src="/public/js/main.js"></script>
 </body>
 </html>
