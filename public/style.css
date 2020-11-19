@@ -34,11 +34,22 @@ body{
     cursor: pointer;
 }
 .search-suggestion{
- width: 600px;
- height: 200px;
- background-color: rgba(128, 128, 128, 0.267);
- margin-top: 10px;
-}
+    width: 600px;
+    height: 200px;
+    background-color: rgba(128, 128, 128, 0.267);
+    margin-top: 10px;}
+
+
+
+
+
+
+
+
+
+
+
+
 .front , .result{
 max-width: 1300px;
 height: 300px;

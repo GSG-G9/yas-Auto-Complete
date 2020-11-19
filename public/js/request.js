@@ -1,15 +1,12 @@
-function fetch() {
+function fetch(url, callBack) {
   const xhr = new XMLHttpRequest();
   xhr.onreadystatechange = () => {
     if (xhr.readyState === 4) {
       if (xhr.status === 200) {
         const dataObj = JSON.parse(xhr.responseText);
-
-         
-
-
+        callBack(dataObj);
       } else if (xhr.status === 404) {
-        // eslint-disable-next-line no-use-before-define
+      // eslint-disable-next-line no-use-before-define
         handleError('page Not found..!');
       } else {
         // eslint-disable-next-line no-use-before-define
@@ -17,7 +14,7 @@ function fetch() {
       }
     }
   };
-  xhr.open('GET', '/name', true);
+  xhr.open('GET', url, true);
   xhr.send();
 }
 function handleError(error) {
@@ -25,4 +22,3 @@ function handleError(error) {
   const bodyText = document.textContent(error);
   bodyHtml.appendChild(bodyText);
 }
-module.exports = fetch;
